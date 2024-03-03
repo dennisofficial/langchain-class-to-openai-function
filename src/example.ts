@@ -7,6 +7,7 @@ const func = {
     properties: {
       article_sections: {
         type: 'array',
+        description: 'List of article sections',
         items: {
           type: 'object',
           properties: {

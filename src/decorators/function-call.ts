@@ -5,7 +5,7 @@ export interface OpenAiFunctionOptions {
   description: string;
 }
 
-export const OpenAIFunction =
+export const FunctionCall =
   (options: OpenAiFunctionOptions): ClassDecorator =>
   (target: Function) => {
     Reflect.defineMetadata(KEY_FUNC_OPTIONS, { name: target.name, ...options }, target);
