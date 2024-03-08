@@ -10,10 +10,14 @@
   "license": "ISC",
   "devDependencies": {
     "prettier": "^3.2.5",
-    "typescript": "^5.3.3",
-    "tsc-watch": "^6.0.4"
+    "tsc-watch": "^6.0.4",
+    "typescript": "^5.3.3"
   },
   "dependencies": {
+    "@langchain/community": "^0.0.35",
+    "@langchain/core": "^0.1.43",
+    "@langchain/openai": "^0.0.18",
+    "langchain": "^0.1.25",
     "reflect-metadata": "^0.2.1"
   }
 }
