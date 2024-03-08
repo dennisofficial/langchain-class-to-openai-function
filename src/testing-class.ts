@@ -6,6 +6,7 @@ import { AiObject } from './decorators/ai-object';
 import { AiArray } from './decorators/ai-array';
 import { AiBoolean } from './decorators/ai-boolean';
 import { AiNull } from './decorators/ai-null';
+import { AiEnum } from './decorators/ai-enum';
 
 class TestingStrings {
   @AiString('A testing string', { pattern: /^(\\([0-9]{3}\\))?[0-9]{3}-[0-9]{4}$/ })
@@ -86,9 +87,12 @@ class TestingArrays {
 
   @AiBoolean('a testing random boolean')
   random_boolean!: boolean;
+}
 
-  @AiNull('a null type?')
-  testing!: null;
+enum TestingE {
+  YES = 'yessssiiirrr!!',
+  NO = 'nahhhhh!',
+  MAYBE = 'maybeeee?',
 }
 
 @FunctionCall({
@@ -104,4 +108,10 @@ export class TestingJSON {
 
   @AiObject('Testing object class')
   arrays!: TestingArrays;
+
+  @AiNull('a null type?')
+  ['a null variable?']!: null;
+
+  @AiEnum('some enum', TestingE)
+  testing_enum!: TestingE;
 }

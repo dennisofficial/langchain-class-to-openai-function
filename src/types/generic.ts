@@ -3,4 +3,5 @@ export interface GenericSchema<T> {
   description?: string;
   default?: T;
   examples?: T[];
+  enum?: T[];
 }
